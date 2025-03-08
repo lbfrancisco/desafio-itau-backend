@@ -217,4 +217,4 @@ git push origin feature/nova-funcionalidade
 Licenciado sob a Licença ISC (veja **package.json**).
 
 ## Contato
-Para dúvidas ou sugestões, contate o autor no GitHub: <a href="https://github.com/lbfrancisco">lbfrancisco</a>.
+Para dúvidas ou sugestões, contate o autor no GitHub: <a target="_blank" href="https://github.com/lbfrancisco">lbfrancisco</a>.
