@@ -9,6 +9,9 @@ export function createTransaction(app: FastifyInstance) {
     '/transacao',
     {
       schema: {
+        tags: ['transações'],
+        description: 'Crie uma nova transação',
+        operationId: 'createTransaction',
         body: z.object({
           valor: z.coerce.number().positive(),
           dataHora: z.coerce.string(),

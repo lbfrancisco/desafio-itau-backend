@@ -8,6 +8,9 @@ export function deleteTransactions(app: FastifyInstance) {
     '/transacao',
     {
       schema: {
+        tags: ['transações'],
+        description: 'Delete todas as transações',
+        operationId: 'deleteTransactions',
         response: {
           200: z.null(),
         },

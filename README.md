@@ -122,6 +122,10 @@ pnpm start
 - Retorna estatísticas das transações dos últimos 60 segundos.
 - Se não houver transações, todos os valores serão **0**.
 
+## Documentação dos Endpoints
+
+Acesse **http://localhost:3333/docs** para obter informações das rotas.
+
 ## Scripts Disponíveis
 - **pnpm dev:** Inicia o servidor em modo de desenvolvimento.
 - **pnpm start:** Executa a versão compilada.

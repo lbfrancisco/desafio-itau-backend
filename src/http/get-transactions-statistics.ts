@@ -8,6 +8,9 @@ export function getTransactionsStatistics(app: FastifyInstance) {
     '/estatistica',
     {
       schema: {
+        tags: ['transações'],
+        description: 'Obtenha as estatísticas das transações',
+        operationId: 'getTransactionsStatistics',
         params: z.object({
           intervaloEmMinuto: z.coerce.number().positive().nullish(),
         }),
