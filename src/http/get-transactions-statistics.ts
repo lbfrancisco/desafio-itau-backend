@@ -5,7 +5,7 @@ import z from 'zod'
 
 export function getTransactionsStatistics(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().get(
-    '/estatisticas',
+    '/estatistica',
     {
       schema: {
         params: z.object({
