@@ -35,8 +35,6 @@ export function createTransaction(app: FastifyInstance) {
       const isValidDate = isDate(toDate(dataHora))
       const isDateInFuture = isFuture(dataHora)
 
-      console.log(isValidDate, isDateInFuture)
-
       if (!isValidDate || isDateInFuture) {
         return reply.status(422).send()
       }
