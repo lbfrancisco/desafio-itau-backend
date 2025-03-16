@@ -1,4 +1,5 @@
 import type { TransactionsRepository } from '@/repositories/transactions-repository'
+import { isDate, isFuture, toDate } from 'date-fns'
 import { UnprocessableEntityError } from './errors/unprocessable-entity-error'
 
 interface CreateTransactionUseCaseRequest {
@@ -14,10 +15,10 @@ export class CreateTransactionUseCase {
       throw new UnprocessableEntityError()
     }
 
-    const invalidDate = isNaN(new Date(dataHora).getTime())
-    const isDateInFuture = !!invalidDate && new Date()
+    const isValidDate = isDate(toDate(dataHora))
+    const isDateInFuture = isFuture(dataHora)
 
-    if (invalidDate || isDateInFuture) {
+    if (!isValidDate || isDateInFuture) {
       throw new UnprocessableEntityError()
     }
 
